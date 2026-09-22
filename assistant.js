@@ -1,0 +1,1 @@
+const r=require('express').Router();const {z}=require('zod');const {answer}=require('../services/aiAssistant');const {validate}=require('../middleware/validate');r.post('/query',validate(z.object({query:z.string().min(2).max(1000)})),(q,s)=>s.json({answer:answer(q.body.query),source:'prototype knowledge base'}));module.exports=r;

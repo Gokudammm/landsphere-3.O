@@ -1,0 +1,1 @@
+const m=require('mongoose');module.exports=m.model('Document',new m.Schema({documentId:{type:String,unique:true},ownerId:String,propertyId:String,fileName:String,mimeType:String,storagePath:String,classification:{type:String,enum:['Public','Restricted','Confidential'],default:'Restricted'},checksum:String},{timestamps:true}));

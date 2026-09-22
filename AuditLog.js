@@ -1,0 +1,1 @@
+const m=require('mongoose');module.exports=m.model('AuditLog',new m.Schema({userId:String,action:String,entity:String,entityId:String,changes:Object,ip:String},{timestamps:true}));

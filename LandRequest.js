@@ -1,0 +1,1 @@
+const m=require('mongoose');module.exports=m.model('LandRequest',new m.Schema({requestId:{type:String,unique:true},userId:String,propertyId:String,serviceType:String,description:String,status:{type:String,default:'Submitted'},documents:[String]},{timestamps:true}));

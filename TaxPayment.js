@@ -1,0 +1,1 @@
+const m=require('mongoose');module.exports=m.model('TaxPayment',new m.Schema({receiptId:{type:String,unique:true},propertyId:String,userId:String,amount:Number,year:Number,status:{type:String,enum:['Pending','Paid','Failed'],default:'Pending'},paidAt:Date},{timestamps:true}));
